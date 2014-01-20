@@ -1,0 +1,22 @@
+<%
+var cover = theme.cover || config.root + 'images/bg-heading.jpg';
+var vcard = theme.about.vcard || config.root;
+var album = theme.about.album || config.root;
+var figure = theme.about.figure || config.root + 'images/img-profile.jpg';
+var twitter = theme.about.twitter || config.root;
+%>
+
+<div class="box profile">
+  <div class="heading" style="background: #3e5354 url(<%- cover %>) no-repeat;">
+    <div class="profile-img">
+      <a href="<%- vcard %>"><img src="<%- figure %>" width="154" height="150" alt="image description"></a>
+    </div>
+    <strong class="user"><a href="<%- config.root %>"><%- config.title %></a></strong>
+    <span class="locate"><%- theme.about.locate %></span>
+  </div>
+  <div class="setting">
+    <a href="<%- vcard %>" class="btn-profile">Profile</a>
+    <a href="<%- album %>" class="btn-photos">Photos</a>
+    <a href="<%- twitter %>" class="btn-follow">Follow me</a>
+  </div>
+</div>

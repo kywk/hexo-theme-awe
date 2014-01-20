@@ -1,0 +1,10 @@
+<% if (typeof tags !== 'undefined' && tags.length > 0) { %>
+<div class="tags widget">
+  <h3 class="title">Tags</h3>
+  <div>
+    <% tags.sort('name').each(function(item){ %>
+    <a class="button" href="<%- config.root %><%- item.path %>"><%= item.name %></a>
+    <% }); %>
+  </div>
+</div>
+<% } %>

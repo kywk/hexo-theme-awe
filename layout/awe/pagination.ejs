@@ -1,0 +1,7 @@
+
+<% /* TODO: Nav with page number */ %>
+<ul class="paging box">
+  <% if (page.prev) { %><li class="prev"><a href="<%- config.root %><%- page.prev_link %>">«</a></li><% } %>
+  <span class="page-number">Page <%- page.current %> of <%- page.total %></span>
+  <% if (page.next) { %><li class="next"><a href="<%- config.root %><%- page.next_link %>">»</a></li><% } %>
+</ul>

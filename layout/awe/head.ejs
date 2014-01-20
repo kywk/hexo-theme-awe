@@ -1,0 +1,33 @@
+<%
+  var title = page.title;
+
+  if (is_archive()){
+    title = 'Archives';
+
+    if (is_month()){
+      title += ': ' + page.year + '/' + page.month;
+    } else if (is_year()){
+      title += ': ' + page.year;
+    }
+  } else if (is_category()){
+    title = 'Category: ' + page.category;
+  } else if (is_tag()){
+    title = 'Tag: ' + page.tag;
+  }
+%>
+<head>
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+  <meta name="viewport" content="width=932" >
+  <meta name="MobileOptimized" content="932" >
+  <meta name="generator" content="<%- config.title %>">
+  <title><%- title %></title>
+
+  <link rel="stylesheet" type="text/css" href="<%- config.root %>css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="<%- config.root %>css/awe.css">
+  <link rel="stylesheet" type="text/css" href="<%- config.root %>css/social-likes.css">
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="<%- config.rss %>">
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="<%- config.root %>js/imgLiquid-min.js"></script>
+  <script src="<%- config.root %>js/social-likes.min.js"></script>
+</head>

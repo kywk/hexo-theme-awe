@@ -1,0 +1,15 @@
+
+<% if (site.posts.length){ %>
+<ul class="widget blogroll">
+  <h3 class="title">Recent Post</h3>
+  <% site.posts.sort('date', -1).limit(5).each(function(post){ %>
+    <% snippet = post.content.replace(/<(?:.|\n)*?>/gm, '').substr(0, 50); %>
+    <li>
+      <div class="text-holder">
+        <h3 class="link-title"><a href="<%= config.root %><%= post.path %>"><%= post.title %></a></h3>
+        <p><%- snippet %></p>
+      </div>
+    </li>
+  <% }); %>
+</ul>
+<% }; %>

@@ -1,0 +1,60 @@
+
+<div class="two-columns">
+  <div class="content">
+<% page.posts.each(function(post) { %>
+<%
+  thumb_img = '';
+
+  if (post.photos.length) {
+    thumb_img = post.photos[0];
+  } else {
+    img_exists = post.content.indexOf("<img src=\"");
+    if (img_exists > -1) {
+      var i = img_exists + 10;
+      thumb_img = post.content.substr(i);
+      thumb_img = thumb_img.substr(0, thumb_img.indexOf("\""));
+    }
+  }
+
+  post_link = config.root + post.path;
+%>
+<% if (thumb_img) { %>
+<% snippet = post.content.replace(/<(?:.|\n)*?>/gm, '').substr(0, 200); %>
+    <div class="post box">
+      <div class="coverimg imgLiquid">
+        <img src="<%- thumb_img %>">
+        <em class="date"><span><%= post.date.format("DD") %></span><%= post.date.format("MMM") %></em>
+        <h2 class="post-title"><a href="<%- post_link %>"><%- post.title %></a></h2>
+      </div>
+      <div class="post-content"><%- snippet %></div>
+<% } else { %>
+<% snippet = post.content.replace(/<(?:.|\n)*?>/gm, '').substr(0, 400); %>
+    <div class="post box nocover">
+      <em class="date"><span><%= post.date.format("DD") %></span><%= post.date.format("MMM") %></em>
+      <h2 class="post-title"><a href="<%- post_link %>"><%- post.title %></a></h2>
+      <div class="post-content"><%- snippet %>
+      </div>
+<% } %>
+      <div class="bottom-panel">
+        <ul class="social-likes" data-url="<%- post_link %>">
+          <li class="facebook" title="like"></li>
+          <li class="twitter" title="twitte"></li>
+          <li class="plusone" title="google"></li>
+        </ul>
+        <span class="post-more"><a href="<%- post_link %>">Read more</a></span>
+      </div>
+    </div>
+<% }); %>
+    <%- partial('pagination', {type: 'page'}) %>
+  </div>
+
+  <div class="widgetarea">
+
+    <%- partial('tag', {tags: site.tags}) %>
+
+    <% theme.widgets.forEach(function(widget){ %>
+      <%- partial('../widget/' + widget) %>
+    <% }); %>
+
+  </div>
+</div>
