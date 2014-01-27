@@ -252,11 +252,6 @@ h1, h2, h3, h4 {
   text-align: justify !important;
   overflow: hidden;
 }
-.post-more {
-  float:right;
-  margin: 5px 0 0 0;
-  font-size: .8em;
-}
 
 .post .coverimg{
   position: relative;
@@ -279,6 +274,15 @@ h1, h2, h3, h4 {
   margin: 0;
   padding: 30px 20px 15px 80px;
 }
+
+.post .btn-comment{
+  float: right;
+  margin: 5px 0 0 0;
+  padding: 0 0 0 25px;
+  font-size: .8em;
+  background: url(../images/ico-coments.png) no-repeat;
+}
+
 
 /* ==========================================================================
    AWE: Index page individual components

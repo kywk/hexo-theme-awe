@@ -4,6 +4,8 @@
   if (typeof post.photos !== 'undefined' && post.photos.length > 0) {
     thumb_img = post.photos[0];
   }
+
+  post_link = config.root + post.path;
 %>
 <div class="two-columns post-page">
   <div class="content">
@@ -32,9 +34,11 @@
     <% if (page.comments && config.disqus_shortname) { %>
     <div class="widget post-comment">
       <h2 class="title">Comments</h2>
-      <div id="disqus_thread">
-        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-      </div>
+      <section id="comments">
+        <div id="disqus_thread">
+          <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+      </session>
     </div>
     <% } %>
   </div>

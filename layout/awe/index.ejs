@@ -36,12 +36,12 @@
       </div>
 <% } %>
       <div class="bottom-panel">
-        <ul class="social-likes" data-url="<%- post_link %>">
+        <ul class="social-likes" data-url="<%- post.permalink %>">
           <li class="facebook" title="like"></li>
           <li class="twitter" title="twitte"></li>
           <li class="plusone" title="google"></li>
         </ul>
-        <span class="post-more"><a href="<%- post_link %>">Read more</a></span>
+        <a href="<%- post.permalink %>#disqus_thread" class="btn-comment">Comments</a>
       </div>
     </div>
 <% }); %>
