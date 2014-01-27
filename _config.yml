@@ -10,12 +10,15 @@ about:
 cover:
 logo: //blog.ghost.org/content/images/2013/Nov/bloglogo_1-1.png
 bio: 'A designer, developer and entrepreneur. Spends his time travelling the world with a bag of kites. Likes journalism and publishing platforms.'
+tag: true
 
 # Content
 excerpt_link: Read More
 
 # Miscellaneous
 rss:
+
+
 
 # widgets
 widgets:

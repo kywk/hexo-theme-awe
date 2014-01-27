@@ -1,3 +1,4 @@
+<!-- disqus -->
 <% if (config.disqus_shortname){ %>
 <script>
   var disqus_shortname = '<%= config.disqus_shortname %>';
@@ -14,8 +15,30 @@
 </script>
 <% } %>
 
+
 <script>
 $(document).ready(function() {
   $('.imgLiquid').imgLiquid({fill:true, fadeInTime:500});
 });
+</script>
+
+
+<!-- fancybox -->
+<link rel="stylesheet" href="<%- config.root %>package/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="<%- config.root %>package/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script type="text/javascript">
+(function($){
+  $(".fancybox").fancybox();
+  $(".various").fancybox({
+    maxWidth  : 800,
+    maxHeight : 600,
+    fitToView : false,
+    width   : '70%',
+    height    : '70%',
+    autoSize  : true,
+    closeClick  : false,
+    openEffect  : 'none',
+    closeEffect : 'none'
+  });
+})(jQuery);
 </script>

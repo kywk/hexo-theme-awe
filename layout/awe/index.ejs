@@ -50,7 +50,9 @@
 
   <div class="widgetarea">
 
-    <%- partial('tag', {tags: site.tags}) %>
+    <% if (theme.tag) { %>
+    <%- partial('tag', {tags: site.tags, order: -1}) %>
+    <% } %>
 
     <% theme.widgets.forEach(function(widget){ %>
       <%- partial('../widget/' + widget) %>

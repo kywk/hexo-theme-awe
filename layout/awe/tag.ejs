@@ -1,10 +1,17 @@
 <% if (typeof tags !== 'undefined' && tags.length > 0) { %>
 <div class="tags widget">
   <h3 class="title">Tags</h3>
-  <div>
-    <% tags.sort('name').each(function(item){ %>
+  <div style="text-align:center">
+    <% tags.sort('length', order).limit(15).each(function(item){ %>
     <a class="button" href="<%- config.root %><%- item.path %>"><%= item.name %></a>
     <% }); %>
   </div>
+  <% if (tags.length > 15) { %>
+  <div class="load-more">
+    <a class="various" href="#fbox-tagcloud">Load more</a>
+  </div>
+  <% } %>
 </div>
 <% } %>
+
+<div class="tagcloud" id="fbox-tagcloud" style="margin:10px; display:none; overflow: hidden"><%- tagcloud(site.tags, { "min_font": 12, "max_font": 24, "amount": 80,}) %></div>

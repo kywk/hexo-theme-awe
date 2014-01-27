@@ -77,7 +77,6 @@ widgets:
     -   Add Categories support
     -   Add image slider for gallery post
 -   Addons
-    -   Tag widget: show top 20 with "Load more"
     -   Fancybox support
     -   post content auto summarize
     -   more widgets
