@@ -1,0 +1,620 @@
+/* ==========================================================================
+   HTML5 base defintions
+   ========================================================================== */
+@import url(http://fonts.googleapis.com/css?family=Source+Code+Pro);
+
+body{
+  color: #9fa4a4;
+  font: 15px Helvetica, Arial, sans-serif;
+  line-height: 1.8em;
+  background: #edf3f2 url(../images/bg-page.jpg);
+}
+
+a {
+  color: #9fa4a4;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+a:active {
+  background-color: transparent;
+}
+
+h1, h2, h3, h4 {
+  font-weight: normal;
+}
+
+/* ==========================================================================
+   AWE: layout
+   ========================================================================== */
+
+.main-container {
+  max-width: 990px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/**
+ * 70/30 two columns: content/sider
+ * TODO: responsive
+ */
+.two-columns {
+  display:inline-block;
+  *display:inline;
+  width: 100%;
+  margin: 0 0 30px 0;
+}
+.two-columns .content {
+  float: left;
+  width: 70%;
+}
+.two-columns .widgetarea {
+  width: 28%;
+  float: right;
+}
+.container {
+  display: inline-block;
+  margin: 0 auto;
+}
+
+/* footer */
+.footer {
+  width: 100%;
+  min-height: 25px;
+  padding: 10px 0;
+  border-top: 1px solid #eae9e9;
+  box-shadow: 0 -2px rgba(0, 0, 0, 0.05), 0 0 1px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  font-size: .8em;
+  text-align: center;
+}
+
+/* ==========================================================================
+   AWE: general styling
+   ========================================================================== */
+.box,
+.widget{
+  background: #fff;
+  border-radius: 1px;
+  box-shadow: 0 2px rgba(0, 0, 0, 0.05), 0 0 1px rgba(0, 0, 0, 0.2);
+}
+
+.widget {
+  display: block;
+  margin: 0 0 20px 0;
+  padding: 15px;
+  font-size: .8em;
+}
+.widget .title {
+  margin: 0 0 10px 0;
+  text-transform: uppercase;
+}
+.widget .bottom {
+  margin: 25px 0 0 0;
+  text-align: center;
+}
+.load-more{
+  margin: 25px 0 0 0;
+  overflow: hidden;
+  text-align: center;
+}
+.load-more a{
+  display: inline-block;
+  width: 85%;
+  font-size: 18px;
+  line-height: 2em;
+  color: #fff;
+  letter-spacing: 1px;
+  background: #9ab26b;
+  text-decoration: none;
+  border-radius: 3px;
+}
+.load-more a:hover{background: #00a7f5;}
+
+.bottom-panel{
+  left: 0;
+  bottom: 0;
+  border-top: 1px solid #e9e8e8;
+  background: #f5f5f5;
+  width: 100%;
+  height: 45px;
+  padding: 8px 20px 0 20px;
+  box-sizing:border-box;
+  overflow: hidden;
+  letter-spacing: 1px;
+}
+
+.button{
+  display: inline-block;
+  vertical-align: top;
+  line-height: 1.5em;
+  letter-spacing: 1px;
+  background: #9ab26b;
+  color: #fff;
+  text-decoration: none;
+  padding: 3px 15px;
+  border-radius: 4px;
+  margin: 3px !important;
+}
+.button:hover {
+  background: #00a7f5;
+}
+
+
+/* ==========================================================================
+   AWE: common component
+   ========================================================================== */
+
+/**
+ * social profile
+ */
+.profile {
+  border-radius: 2px;
+  margin: 0 0 25px;
+}
+.profile .heading {
+  height: 79px;
+  position: relative;
+  padding: 89px 0 0 250px;
+  color: #b0b2b2;
+}
+.profile-img {
+  position: absolute;
+  left: 34px;
+  bottom: -47px;
+  padding: 9px 10px 9px 9px;
+  border-radius: 3px;
+  background: #fff;
+}
+.user {
+  font-size: 34px;
+  line-height: 38px;
+  color: #fff;
+  display: block;
+  margin: 0 0 2px -2px;
+}
+.user a {
+  color: #fff;
+  text-decoration: none;
+}
+.user a:hover{text-decoration: underline;}
+.locate {
+  padding-left: 20px;
+  display: inline-block;
+  background: url(../images/marker-locate.png) no-repeat 1px 4px;
+}
+.setting {
+  border-bottom: 1px solid #ddd;
+  padding: 18px 15px 13px 217px;
+  font-size: 17px;
+  line-height: 20px;
+  overflow: hidden;
+  letter-spacing: -1px;
+}
+.setting a {
+  float: left;
+  margin: 0 30px 0 0;
+  padding: 2px 0 0 27px;
+  text-transform: uppercase;
+  color: #7e8c8d;
+}
+.btn-profile{background: url(../images/ico-profile.png) no-repeat 0 2px;}
+.btn-photos{background: url(../images/ico-photos.png) no-repeat 0 2px;}
+.setting .btn-follow{
+  color: #fff;
+  letter-spacing: 0;
+  text-transform: none;
+  height: 32px;
+  line-height: 32px;
+  padding: 0 17px;
+  font-weight: bold;
+  float: right;
+  background: #7f8db5;
+  border-radius: 2px;
+  margin: -7px 0 0;
+}
+.setting .btn-follow:hover{text-decoration: none;}
+
+/**
+ * Post
+ */
+.post {
+  position: relative;
+  margin: 0 0 35px;
+  padding: 0;
+}
+.post .date {
+  position: absolute;
+  left: -20px;
+  width: 82px;
+  height: 77px;
+  font-size: 14px;
+  line-height: 16px;
+  font-style: normal;
+  color: #fff;
+  background: #9ab26b;
+  overflow: hidden;
+  text-align: center;
+  text-transform: uppercase;
+  padding-right: 7px;
+}
+.post .date span {
+  font-size: 46px;
+  line-height: 48px;
+  display: block;
+  padding: 7px 0 0;
+  margin: 0 0 1px 7px;
+  text-shadow: 1px 1px #83975b, 2px 2px #83975b, 3px 3px #83975b, 4px 4px #83975b, 5px 5px #83975b, 6px 6px #83975b, 7px 7px #83975b, 8px 8px #83975b, 9px 9px #83975b, 10px 10px #83975b, 11px 11px #83975b, 12px 12px #83975b, 13px 13px #83975b, 14px 14px #83975b, 15px 15px #83975b, 16px 16px #83975b, 17px 17px #83975b, 18px 18px #83975b, 19px 19px #83975b, 20px 20px #83975b, 21px 21px #83975b, 22px 22px #83975b, 23px 23px #83975b, 24px 24px #83975b, 25px 25px #83975b, 26px 26px #83975b, 27px 27px #83975b, 28px 28px #83975b, 29px 29px #83975b, 30px 30px #83975b, 31px 31px #83975b, 32px 32px #83975b, 33px 33px #83975b, 34px 34px #83975b, 35px 35px #83975b, 36px 36px #83975b, 37px 37px #83975b, 38px 38px #83975b, 39px 39px #83975b, 40px 40px #83975b, 41px 41px #83975b, 42px 42px #83975b, 43px 43px #83975b, 44px 44px #83975b, 45px 45px #83975b, 46px 46px #83975b, 47px 47px #83975b, 48px 48px #83975b, 49px 49px #83975b, 50px 50px #83975b, 51px 51px #83975b, 52px 52px #83975b, 53px 53px #83975b, 54px 54px #83975b, 55px 55px #83975b, 56px 56px #83975b, 57px 57px #83975b, 58px 58px #83975b, 59px 59px #83975b, 60px 60px #83975b;
+}
+.post-content {
+  margin: 15px 20px;
+  text-align: justify !important;
+  overflow: hidden;
+}
+
+.post .coverimg{
+  position: relative;
+  width: 100%;
+  height: 255px;
+}
+.post .coverimg .date {
+  bottom: 0;
+}
+.post .coverimg h2 {
+  position: absolute;
+  bottom: 0;
+  left: 80px;
+  text-shadow: 1px 1px #83975b;
+}
+.post .coverimg h2 a {
+  color: #fff;
+}
+.nocover .post-title {
+  margin: 0;
+  padding: 30px 20px 15px 80px;
+}
+
+.post .btn-comment{
+  float: right;
+  margin: 5px 0 0 0;
+  padding: 0 0 0 25px;
+  font-size: .8em;
+  background: url(../images/ico-coments.png) no-repeat;
+}
+
+
+/* ==========================================================================
+   AWE: Index page individual components
+   ========================================================================== */
+
+/* paging */
+.paging {
+   margin: 0 0 45px 0;
+   padding: 15px 60px;
+   list-style: none;
+   font-size: .9em;
+   line-height: 38px;
+   text-align: center;
+   position: relative;
+   border-radius: 2px;
+}
+.paging li{
+   display: inline-block;
+   vertical-align: top;
+   width: 35px;
+   height: 39px;
+   text-align: center;
+   margin-left: -3px;
+}
+.paging .prev,
+.paging .next{
+   position: absolute;
+   left: 15px;
+   top: 15px;
+   font-size: 1.2em;
+}
+.paging .next{
+   left: auto;
+   right: 15px;
+}
+.paging a{
+   color: #9f9f9f;
+   text-decoration: none;
+   display: block;
+   height: 100%;
+}
+.paging a:hover,
+.paging .current-page {
+   background: #9ab26b;
+   color: #fff;
+   font-weight: bold;
+   border-radius: 4px;
+}
+.paging .current-page {
+   font-weight: bold;
+}
+
+
+.post-page .post-content img {
+  max-width: 660px;
+}
+
+/* ==========================================================================
+   AWE: Hexo commponents
+   ========================================================================== */
+
+blockquote {
+  margin: 0 0 25px 5px;
+  padding: 0 0 0 25px;
+  border-left: 3px solid #ccc;
+}
+blockquote footer {
+  font-size: .85em;
+  line-height: 1.5em;
+}
+
+
+/* Code, Pre [landscape](http://goo.gl/hnwXeD) */
+.post-content pre,
+.post-content .highlight {
+  background: #333;
+  margin: -10px -20px 20px;
+  padding: 15px 30px;
+  border-style: solid;
+  border-color: #ddd;
+  border-width: 1px 0;
+  overflow: auto;
+  color: #ccc;
+  line-height: 22.400000000000002px;
+  font-size: 14px;
+  text-shadow: none;
+}
+.post-content pre a,
+.post-content .highlight a{
+  color: #23dbdb;
+}
+.post-content .highlight .gutter pre,
+.post-content .gist .gist-file .gist-data .line-numbers {
+  color: #666;
+  font-size: 0.85em;
+}
+.post-content pre,
+.post-content code {
+  font-family: "Source Code Pro", Consolas, Monaco, Menlo, Consolas, monospace;
+}
+.post-content code {
+  background: #ddd;
+  font-size: 14px;
+  text-shadow: 0 1px #fff;
+  padding: 0 0.3em;
+}
+.post-content pre code {
+  background: none;
+  text-shadow: none;
+  padding: 0;
+}
+.post-content .highlight pre {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+.post-content .highlight table {
+  margin: 0;
+  width: auto;
+}
+.post-content .highlight td {
+  border: none;
+  padding: 0;
+}
+.post-content .highlight figcaption {
+  zoom: 1;
+  font-size: 0.85em;
+  color: #999;
+  line-height: 1em;
+  margin-bottom: 1em;
+}
+.post-content .highlight figcaption:before,
+.post-content .highlight figcaption:after {
+  content: "";
+  display: table;
+}
+.post-content .highlight figcaption:after {
+  clear: both;
+}
+.post-content .highlight figcaption a {
+  float: right;
+}
+.post-content .highlight .gutter pre {
+  text-align: right;
+  padding-right: 20px;
+}
+.post-content .gist {
+  margin: 0 -20px;
+  border-style: solid;
+  border-color: #ddd;
+  border-width: 1px 0;
+  background: #333;
+  padding: 15px 20px 15px 0;
+}
+.post-content .gist .gist-file {
+  border: none;
+  font-family: "Source Code Pro", Consolas, Monaco, Menlo, Consolas, monospace;
+  margin: 0;
+}
+.post-content .gist .gist-file .gist-data {
+  background: none;
+  border: none;
+}
+.post-content .gist .gist-file .gist-data .line-numbers {
+  background: none;
+  border: none;
+  padding: 0 20px 0 0;
+}
+.post-content .gist .gist-file .gist-data .line-data {
+  padding: 0 !important;
+}
+.post-content .gist .gist-file .highlight {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+.post-content .gist .gist-file .gist-meta {
+  background: #333;
+  color: #999;
+  font: 0.85em "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-shadow: 0 0;
+  padding: 0;
+  margin-top: 1em;
+  margin-left: 20px;
+}
+.post-content .gist .gist-file .gist-meta a {
+  color: #258fb8;
+  font-weight: normal;
+}
+.post-content .gist .gist-file .gist-meta a:hover {
+  text-decoration: underline;
+}
+pre .comment,
+pre .title {
+  color: #999;
+}
+pre .variable,
+pre .attribute,
+pre .tag,
+pre .regexp,
+pre .ruby .constant,
+pre .xml .tag .title,
+pre .xml .pi,
+pre .xml .doctype,
+pre .html .doctype,
+pre .css .id,
+pre .css .class,
+pre .css .pseudo {
+  color: #f2777a;
+}
+pre .number,
+pre .preprocessor,
+pre .built_in,
+pre .literal,
+pre .params,
+pre .constant {
+  color: #f99157;
+}
+pre .class,
+pre .ruby .class .title,
+pre .css .rules .attribute {
+  color: #9c9;
+}
+pre .string,
+pre .value,
+pre .inheritance,
+pre .header,
+pre .ruby .symbol,
+pre .xml .cdata {
+  color: #9c9;
+}
+pre .css .hexcolor {
+  color: #6cc;
+}
+pre .function,
+pre .python .decorator,
+pre .python .title,
+pre .ruby .function .title,
+pre .ruby .title .keyword,
+pre .perl .sub,
+pre .javascript .title,
+pre .coffeescript .title {
+  color: #69c;
+}
+pre .keyword,
+pre .javascript .function {
+  color: #c9c;
+}
+
+/* video container */
+.video-container {
+  position: relative;
+  padding-top: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+.video-container iframe,
+.video-container object,
+.video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin-top: 0;
+}
+
+
+/* Hexi only */
+.toc-wrapper {
+  border-radius: 4px;
+  border-bottom: 1px solid #ddd;
+  margin: 0 0 1em 0;
+  padding: 10px;
+  line-height: 1.6em;
+}
+.toc, .toc ol{
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 15px;
+}
+.toc li {
+  padding: 0 0 3px 0;
+}
+
+
+/* ==========================================================================
+   AWE: buildin widgets
+   ========================================================================== */
+
+/* tag could */
+.tagcloud a {
+  padding: 3px 5px;
+  display: inline-block;
+  color: #333;
+}
+
+/* links */
+
+
+
+/* blogroll: recent post, etc */
+ul.blogroll{
+  list-style: none;
+  font-size: 13px;
+  line-height: 15px;
+}
+.blogroll li{
+  padding: 10px;
+  border-top: 1px solid #eae9e9;
+}
+.blogroll .title + li{
+  border: none;
+}
+.blogroll .img-holder{
+  float: left;
+  margin: 1px 17px 0 0;
+}
+.blogroll .text-holder{overflow: hidden}
+.blogroll .link-title {
+  margin: 10px 0;
+}
+
+
+/* ==========================================================================
+   AWE: jQuery plugins
+   ========================================================================== */
+
+/**
+ * imgLiquid.js
+ * set "visibility:hidden" for better results or use src/css/imgLiquid.js.css
+ */
+.imgLiquid img{
+    visibility:hidden;
+}
